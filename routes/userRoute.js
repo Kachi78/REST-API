@@ -1,4 +1,4 @@
-const express = require('express');
+import express from "express";
 
 const userRoute = express.Router();
 const { createUser, getSingleUser, updateUser, deleteUser } = require('../controller/userController');
@@ -8,4 +8,4 @@ userRoute.get('/single-user/:userId', getSingleUser);
 userRoute.patch('/update-user/:userId', updateUser);
 userRoute.delete('/delete-user/:userId', deleteUser);
 
-module.exports = userRoute;
+export default userRoute;
