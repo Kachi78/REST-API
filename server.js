@@ -21,7 +21,8 @@ app.get("/", (req, res) => {
   res.send("Server is running");
 });
 
-app.use("/users", userRoutes);
+app.use("/users", userRoute);
+app.use("/users", productRoute);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port: ${PORT}`);
