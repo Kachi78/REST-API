@@ -1,7 +1,8 @@
 import express from "express";
+import { createUser, getSingleUser, updateUser, deleteUser } from "../controller/userController.js";
 
 const userRoute = express.Router();
-const { createUser, getSingleUser, updateUser, deleteUser } = require('../controller/userController');
+
 
 userRoute.post('/new-user', createUser);
 userRoute.get('/single-user/:userId', getSingleUser);

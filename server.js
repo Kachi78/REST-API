@@ -1,7 +1,8 @@
 import "dotenv/config";
 import express from "express";
 import mongoose from "mongoose";
-import userRoutes from "/routes/userRoute.";
+import userRoute from "./routes/userRoute.js";
+import productRoute from "./routes/productRoute.js";
 
 mongoose
   .connect(process.env.MONGODB_URI)
@@ -22,7 +23,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/users", userRoute);
-app.use("/users", productRoute);
+app.use("/products", productRoute);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port: ${PORT}`);
